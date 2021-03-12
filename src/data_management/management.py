@@ -38,6 +38,20 @@ def col_names(df, name):
     
     return df
 
+
+def neg(df, prefix, sub):
+    '''
+    function converting a variable to negative value.
+    Parameters are dataframe, prefix list, target variable
+    '''
+    
+    for i in prefix:
+        if i == "":
+            df[sub] = -df[sub]
+        else:
+            df[i+sub] = -df[i+sub]
+    return df
+
 #Below functions are for figures
 def fig1_gen_var(df, alpha, beta):
     '''
