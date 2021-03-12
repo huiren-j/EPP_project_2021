@@ -29,8 +29,16 @@ def fig1_reg(df, name_list):
 
 #draw graph
 def figure1(slope_b, slope_s):
-    '''This is plotting figure1 which is about investment on belief and
-    relationship between belief and true value of children's academic ability'''
+    '''Draw line graphs
+
+    Args:
+        slope_b (float)
+        slope_s (float)
+    Returns:
+        ax (matplotlib axies)
+    
+    ***axis labeling must be added***
+    '''
 
     #slope_b= 0.3  #belief on trust
     #slope_s =1.3  #investment on belief
@@ -68,4 +76,76 @@ def figure1(slope_b, slope_s):
     plt.axis([-10, 110, -10, 150])
     plt.plot(x_c, y_c, color = 'green')
     
-    return plt.show()
+    return ax
+
+def fig2_bar(df, y):
+    '''To generate bar plot based on regression
+
+    Args: 
+        df (dataframe)
+        y  (string)
+    Return:
+        ax (matplotlib Axes)
+
+    '''
+    result = mt.reg(df,y,'treat',addcons = True ,cluster = "hhid").summary
+    result = result[['coeff','CI_high','CI_low']]
+    result = result.rename({"_cons": "control"}, axis = 'index')
+
+    stat = result.columns.tolist()
+    constant = result.iloc[1,0]
+
+    for s in stat:
+        result.loc["treat", s] = result.loc["treat", s] + constant
+
+    result["coeff"] = result["coeff"].round(1)
+    result["group_id"] = result.index
+
+    ax = sns.barplot(x = "group_id", y = "coeff", data = result)
+    return ax
+
+
+
+#2 : "b_ave", "u_ave"
+#4 : "math", "engl"
+def figure2_4(df_control, df_treat, subj):
+    '''To draw graphs and fill in between them
+    *axis labeling must be added
+    Args:
+        df_control (dataframe)
+        df_treat (dataframe)
+        sub (string)
+    Return
+        ax (matplotlib Axies)
+    '''
+
+    df_control["treat"] =0
+    df_treat["treat"] =1
+    df = pd.concat([df1,df2])
+    
+    df["mean"] = (df["lower"] + df["upper"]) / 2 
+    
+    x = df.loc[(df["subj"]==subj)&(df["treat"]==0), "x"]
+    lb = df.loc[(df["subj"]==subj)&(df["treat"]==0), "lower"]
+    ub = df.loc[(df["subj"]==subj)&(df["treat"]==0), "upper"]
+    m = df.loc[(df["subj"]==subj)&(df["treat"]==0), "mean"]
+
+
+    x2 = df.loc[(df["subj"]==subj)&(df["treat"]==1), "x"]
+    lb2 = df.loc[(df["subj"]==subj)&(df["treat"]==1), "lower"]
+    ub2 = df.loc[(df["subj"]==subj)&(df["treat"]==1), "upper"]
+    m2 = df.loc[(df["subj"]==subj)&(df["treat"]==1), "mean"]
+
+    fig, ax = plt.subplots()
+    ax.plot(x, lb, color = "gray")
+    ax.plot(x, ub, color = "gray")
+    ax.fill_between(x,lb,ub, color="xkcd:light gray")
+    ax.plot(x, m, ":", color = "green")
+    
+
+    ax.plot(x2, lb2, color = "gray")
+    ax.plot(x2, ub2, color = "gray")
+    ax.fill_between(x2,lb2,ub2, color="xkcd:gray")
+    ax.plot(x2, m2, color = "blue")
+    
+    return ax
