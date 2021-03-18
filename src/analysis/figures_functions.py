@@ -22,10 +22,18 @@ def bound_function(df, condition):
     
     return out
 
-def fig1_reg(df, name_list):
-    '''This function is analysis to see investment on belief and
-    belief on truth. Here, we will have a look at correlation with regression results'''
 
+def figure1_reg(df, name_list):
+    '''Calculate correlation and run regression between investment and trust & beliefs
+    
+    Args:
+        df (dataframe)
+        name_list (list)
+    Return:
+        correlation (dataframe)
+        coeff (dataframe)
+        coeff1 (dataframe)
+    '''
     correlation = df[name_list].corr(method = "pearson")
     
     coeff = []
@@ -36,65 +44,20 @@ def fig1_reg(df, name_list):
             result = mt.reg(df, "ic_"+name, "truth").summary.rename(columns = {"coeff": name} , index = {"truth": "inv on truth"})[name]
             coeff.append(result)
         else:
-            result = mt.reg(df, "ic_"+name, "truth").summary.rename(columns = {"coeff": name} , index = {"truth": "inv on truth"})[name]
-            result1 = mt.reg(df, "ic_"+name, name ).summary.rename(columns = {"coeff": name }, index = {name : "inv on belief"})[name]
+            result = mt.reg(df, "ic_"+name, "truth").summary.rename(columns = {"coeff": name} , index = {"truth": "inv_b on truth"})[name]
             coeff.append(result)
-            coeff1.append(result1)
+            
+            if name == 'beliefs1':
+                continue
+            
+            else:
+                result1 = mt.reg(df, "ic_"+name, name ).summary.rename(columns = {"coeff": name }, index = {name : "inv on belief"})[name]
+                coeff1.append(result1)
     
     coeff = pd.concat(coeff, axis = 1)
     coeff1 = pd.concat(coeff1, axis = 1)
     return correlation, coeff, coeff1
 
-#draw graph
-def figure1(slope_b, slope_s):
-    '''Draw line graphs
-
-    Args:
-        slope_b (float)
-        slope_s (float)
-    Returns:
-        ax (matplotlib axies)
-    
-    ***axis labeling must be added***
-    '''
-
-    #slope_b= 0.3  #belief on trust
-    #slope_s =1.3  #investment on belief
-    
-    intercept_b = 50*(1-slope_b)
-    intercept_s = 75-slope_s*50
-
-    slope_calc = slope_b*slope_s  
-    intercept_calc = intercept_s+slope_s*intercept_b
-
-    #panel(a)
-    x = np.arange(0,100)
-    y = slope_b * x + intercept_b 
-    z = x
-
-    plt.figure(figsize= (10,5))
-    ax = plt.subplot(1,3,1)
-    plt.axis([-10, 110, -10, 150])
-    plt.plot(x,y)
-    plt.plot(x,z)
-
-    #panel(b)
-    x_b = np.arange(0,100)
-    y_b = slope_calc*x_b + intercept_calc
-    #z_b = slope_s*x_b + intercept_s
-    plt.subplot(132, sharex = ax, sharey = ax)
-    plt.axis([-10, 110, -10, 150])
-    plt.plot(x_b, y_b, ':', color = 'red')
-
-    #ploc(c)
-    x_c = np.arange(0,100)
-    y_c = slope_s*x_c + intercept_s
-    #z_c = slope_calc*x_c + intercept_calc
-    plt.subplot(133, sharex = ax, sharey = ax)
-    plt.axis([-10, 110, -10, 150])
-    plt.plot(x_c, y_c, color = 'green')
-    
-    return ax
 
 
 def figure2_AB_1(df, y):
