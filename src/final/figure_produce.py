@@ -7,7 +7,7 @@ import seaborn as sns
 
 def figure_fill(subject, xlabel, ylabel, title, label1 = "x-axis:believed score", label2 =  "x-axis:true score" ):
     '''
-    Common plot feature of figures
+    a common function in plotting each figures
     Args:
         subject (list)
         xlabel (string)
@@ -36,6 +36,54 @@ def figure_fill(subject, xlabel, ylabel, title, label1 = "x-axis:believed score"
     return fig
 
 
+def figure1(slope_b, slope_s):
+    '''Draw linear graphs about beliefs, trust and investment
+    Args:
+        slope_b (float)
+        slope_S (float)
+    Returns:
+        fig (figure)
+    '''
+    
+    intercept_b = 50*(1-slope_b)
+    intercept_s = 75-slope_s*50
+
+    slope_calc = slope_b*slope_s  
+    intercept_calc = intercept_s+slope_s*intercept_b
+    
+    ran = [-10, 110, -10, 150]
+
+    #panel(a)
+    x = np.arange(0,100)
+    y = slope_b * x + intercept_b 
+    z = x
+
+    fig = plt.figure(figsize= (20,5))
+    ax = plt.subplot(1,3,1)
+    plt.axis(ran)
+    plt.plot(x,y)
+    plt.plot(x,z)
+    plt.title("PanelA. Beliefs maybe \ninaccurate on true performance", loc = 'left')
+
+    #panel(b)
+    x_b = np.arange(0,100)
+    y_b = slope_calc*x_b + intercept_calc
+    plt.subplot(132, sharex = ax, sharey = ax)
+    plt.axis(ran)
+    plt.plot(x_b, y_b, ':', color = 'red')
+    plt.title("PanelB. Parents choose their investments \nbased on their (inaccurate)beliefs", loc = 'left')
+
+    #ploc(c)
+    x_c = np.arange(0,100)
+    y_c = slope_s*x_c + intercept_s
+    plt.subplot(133, sharex = ax, sharey = ax)
+    plt.axis(ran)
+    plt.plot(x_c, y_c, color = 'green')
+    plt.title("PanelC. The slope of investments on true \nperformance may thus be attenuated relative \nto the slope on beliefs", loc = 'left')
+    
+    return fig
+
+
 def figure2_AB(df_reg, x = None, y = "Absolute value \n (true scoore - baseline beliefs)", t = "PanelA. Gap between true test scores last term \n and baseline beliefs about last term"):
     '''
     Barplot comparing difference in belief values between control and treat group
@@ -51,3 +99,4 @@ def figure2_AB(df_reg, x = None, y = "Absolute value \n (true scoore - baseline 
     fig.set(xlabel = x, ylabel= y, title = t)
     fig = fig.get_figure()
     return fig
+
