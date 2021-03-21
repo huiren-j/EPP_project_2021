@@ -58,7 +58,7 @@ The main hypothesis is that parents' investment decisions rely on their beliefs.
 Parents' investment on education implies both the *level* of spending and the specific *type* of educatinal resources for each child.
 The peceived production function for child j's quality is
 
-![equation]("http://latex.codecogs.com/gif.latex?\dpi{110}&space;q_{ij}&space;=&space;f(s_{ij},&space;a_{ij})" title="http://latex.codecogs.com/gif.latex?\dpi{110} q_{ij} = f(s_{ij}, a_{ij})")
+![equation]("http://latex.codecogs.com/gif.latex?\dpi{110}&space;q_{ij}&space;=&space;f(s_{ij},&space;a_{ij})")
 
 where $s_{ij}$ = parent i's investment choice for child j, $ a_{ij} $ = child j's baseline academic performance, and function $f$ is concave in $s_{ij}$.
 
