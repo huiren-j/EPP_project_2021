@@ -4,7 +4,49 @@ import econtools.metrics as mt
 import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from itertools import *
-from figures_management import *
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+import data_management.figures_management
+import analysis.tables_analysis
+import analysis.figures_analysis
+import final.table_produce
+
+def treat_dummy(df):
+    '''Convert string type categorical variable to dummy variable
+    
+    Args:
+        df (dataframe)
+    Returns:
+        df (dataframe)
+    '''
+
+    df = pd.get_dummies(df,columns=["treat"])
+    df["treat"] = df["treat_Treatment"]
+    df = df.drop(columns=["treat_Control"])
+    df = df.drop(columns=["treat_Treatment"])
+    
+    return df
+
+
+def neg(df, sub, prefix = ""):
+    '''Converting a variable to negative value.
+    
+    Args:
+        df (dataframe)
+        sub (string)
+        prefix (list)
+    
+    Returns:
+        df (dataframe)
+    '''
+    
+    for i in prefix:
+        if i == "":
+            df[sub] = -df[sub]
+        else:
+            df[i+sub] = -df[i+sub]
+    return df
 
 
 def col_names(df, name):

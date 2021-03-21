@@ -4,7 +4,14 @@ import econtools.metrics as mt
 import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 from itertools import *
-from tables_management import *
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+import data_management.tables_management
+import analysis.tables_analysis
+import analysis.figures_analysis
+import final.table_produce
+
 
 
 def figure1_1(df, alpha, beta):
