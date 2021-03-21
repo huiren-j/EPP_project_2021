@@ -50,8 +50,7 @@ The main hypothesis is that parents' investment decisions rely on their beliefs.
     
 <img src = "./src/final/figure1.png" align = "left">
 
-<br><br>
----
+
 ---
 # 2. Empirical Approach for Detecting Mistakes
 ---
@@ -59,10 +58,8 @@ The main hypothesis is that parents' investment decisions rely on their beliefs.
 Parents' investment on education implies both the *level* of spending and the specific *type* of educatinal resources for each child.
 The peceived production function for child j's quality is
 
-
-$$q_{ij} = f(s_{ij}, a_{ij})$$
-
-where $ s_{ij} $ = parent i's investment choice for child j, $ a_{ij} $ = child j's baseline academic performance, and function $f$ is concave in $s_{ij}$.
+![equation](http://latex.codecogs.com/png.latex?\dpi{110}%20q_{ij}%20=%20f(s_{ij},%20a_{ij})
+where $s_{ij}$ = parent i's investment choice for child j, $ a_{ij} $ = child j's baseline academic performance, and function $f$ is concave in $s_{ij}$.
 
 
 In addtion, we assume that parent i's investment choice $s_{ij}$ is to maximize household utility:
