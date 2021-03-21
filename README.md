@@ -60,7 +60,7 @@ The peceived production function for child j's quality is
 
 <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;q_{ij}&space;=&space;f(s_{ij},&space;a_{ij})" title="http://latex.codecogs.com/png.latex?\dpi{110} q_{ij} = f(s_{ij}, a_{ij})" />
 
-where $s_{ij}$ = parent i's investment choice for child j, $ a_{ij} $ = child j's baseline academic performance, and function $f$ is concave in $s_{ij}$.
+where <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;s_{ij}" title="http://latex.codecogs.com/png.latex?\dpi{110} s_{ij}" /> = parent i's investment choice for child j,<img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;a_{ij}" title="http://latex.codecogs.com/png.latex?\dpi{110} a_{ij}" /> = child j's baseline academic performance, and function f is concave in <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;s_{ij}" title="http://latex.codecogs.com/png.latex?\dpi{110} s_{ij}" />.
 
 
 In addtion, we assume that parent i's investment choice $s_{ij}$ is to maximize household utility:
