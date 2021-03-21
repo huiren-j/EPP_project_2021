@@ -59,6 +59,7 @@ Parents' investment on education implies both the *level* of spending and the sp
 The peceived production function for child j's quality is
 
 ![equation](http://latex.codecogs.com/png.latex?\dpi{110}%20q_{ij}%20=%20f(s_{ij},%20a_{ij})
+
 where $s_{ij}$ = parent i's investment choice for child j, $ a_{ij} $ = child j's baseline academic performance, and function $f$ is concave in $s_{ij}$.
 
 
