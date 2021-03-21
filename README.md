@@ -67,7 +67,7 @@ In addtion, we assume that parent i's investment choice <img src="http://latex.c
 
 <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;s^*_{ij}&space;=&space;\underset{s}{\operatorname{argmax}}U(q_{ij})" title="http://latex.codecogs.com/png.latex?\dpi{110} s^*_{ij} = \underset{s}{\operatorname{argmax}}U(q_{ij})" />
 
-Lastly, assume parent i does not know child j's true performance. That is the parents formulate their own belief $\alpha_{ij}$ described by distribution <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;g(\alpha_{ij},&space;\sigma^2_{ij})" title="http://latex.codecogs.com/png.latex?\dpi{110} g(\alpha_{ij}, \sigma^2_{ij})" />
+Lastly, assume parent i does not know child j's true performance. That is the parents formulate their own belief <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;&space;\alpha_{ij}" title="http://latex.codecogs.com/png.latex?\dpi{110} \alpha_{ij}" /> described by distribution <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;g(\alpha_{ij},&space;\sigma^2_{ij})" title="http://latex.codecogs.com/png.latex?\dpi{110} g(\alpha_{ij}, \sigma^2_{ij})" />
 where <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;&space;\alpha_{ij}" title="http://latex.codecogs.com/png.latex?\dpi{110} \alpha_{ij}" /> means parent i's *belief* about child j's academic ability and <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;\sigma^2_{ij}" title="http://latex.codecogs.com/png.latex?\dpi{110} \sigma^2_{ij}" /> means parents' belief uncertainty.
 
 <br>
