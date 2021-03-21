@@ -4,6 +4,14 @@ import matplotlib.pyplot as plt
 import math
 import econtools.metrics as mt
 import seaborn as sns
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+import data_management.figures_management
+import data_management.tables_management
+import analysis.tables_analysis
+import analysis.figures_analysis
+import final.table_produce
 
 def figure_fill(subject, xlabel, ylabel, title, label1 = "x-axis:believed score", label2 =  "x-axis:true score" ):
     '''
