@@ -49,6 +49,7 @@ Dizon-Ross(2019) examined parents' beliefs about their children's academic abili
 The main hypothesis is that parents' investment decisions rely on their beliefs. Figure 1. shows that the relation between beliefs and investments based on the hypothesis. PanelA implies that parents have prospensity to underestimate their children's ability if children's achievements are high, and to overestimate if children's achievements are low. Therefore, the author argues that if current investment is depending on their accurate beleifs, then correcting their beliefs by delievering accurate information will attenuate the slope on beliefs.
     
 <img src = "./src/final/figure1.png" align = "left">
+<br><br>
 
 
 ---
@@ -89,6 +90,9 @@ where <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;&space;\alph
     
 - <u>Eligibility Inverviews</u>
     : These above process were conducted based on data gathered from students at school and on school administrative data. Among 3,451 sampled households, 21 percent of households were found to be ineligible during the parent intervies. Thus, final experimental sample comprises 5,268 parent-child pairs.
+
+### 3.2. Experiment Outcomes(Data)
+<br>
 
 **Overview of Data Collection**
 
@@ -135,3 +139,33 @@ where <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;&space;\alph
     </tbody>
 </table>
 <br>
+
+---
+# 4. Empirical Results
+---
+###4.1 Beliefs
+This section 
+    
+#### 4.1.1. Result A1: *Parents' beliefs about academic performance are inaccurate*
+
+PanelA of Figure 2 presents the average of the absolute value of the gap between parents' mean beliefs about their children's academic performance and their children's true academic performance. As you can see the PanelA shows that the average gap of each groups is almost same before information intervention. However, PanelC suggests that the average gap diverged after information intervention. That is, when they are asked about likely schore on a hypothetical test, their beliefs(answers) turned out differentiated. Moreover, the treated group went through larger changes compared to control group, the direction of change is negative. This implies that information intervention make a role of reducing gap between parents inaccurate beliefs and true score.  
+<img src = "./src/final/figure2_A.png" align = "left"><img src = "./src/final/figure2_C.png" align = "center">
+<img src = "./src/final/figure2_B.png" align = "left"><img src = "./src/final/figure2_D.png" align = "center">
+    
+#### 4.1.2. Result A2: *Providing information aligns beliefs better with students' test scores*
+
+https://editor.codecogs.com/
+<img src = "./src/final/figure3_A1.png" align = "left"><img src = "./src/final/figure3_A2.png" align = "center">
+<img src = "./src/final/figure3.png" align = "center">
+    
+<br>
+    
+#### 4.2.1 Result B1: *Control group parents attempt to tailor their investments to performance, but partly fail.*
+his can give us insight into parents' preferred investment function and the likely production function that they have in mind.
+
+
+Figure 3. compares the preferred investment investment function (investments plotted against believed performance: the dashed line) with the actual investment function (investments plotted against true performance: the solid lines). Panel A1 and A2 of Figure 3 presents the results for math and English workbook difficulty choices graphically. Recall that for each book, parents could choose from three different difficulty levels.   
+<img src = "./src/final/figure3_A1.png" align = "left"><img src = "./src/final/figure3_A2.png" align = "center">
+<img src = "./src/final/figure3.png" align = "center">
+    
+    
