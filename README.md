@@ -145,7 +145,7 @@ where <img src="http://latex.codecogs.com/png.latex?\dpi{110}&space;&space;\alph
 ---
 # 4. Empirical Results
 ---
-###4.1 Beliefs
+### 4.1 Beliefs
 This section 
     
 #### 4.1.1. Result A1: *Parents' beliefs about academic performance are inaccurate*
