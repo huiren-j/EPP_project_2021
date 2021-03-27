@@ -25,13 +25,13 @@ This repository is constructed by a template offered by https://github.com/OpenS
 <li><span><a href="#2.-Empirical Approach" data-toc-modified-id="2.-Empirical Approach-2">2.Empricial Approach</a></span></li>
 <li><span><a href="#3.-Experimental Design and Outcomes(Data)" data-toc-modified-id="3.-Experimental Design and Outcomes(Data)-3">3.Experimental Design and Outcomes(Data)</a></span></li>
 <li><span><a href="#4.-Empirical Results" data-toc-modified-id="4.-Empirical Results-4">4.Empirical Results</a></span></li>
-<ul class="toc-item"><li><span><a href="#4.1. Beliefs" data-toc-modified-id="##4.1.-Beliefs-4.1">4.1. Beliefs</a></span></li>
-<li><span><a href="#4.2. Results: Experimental Outcomes" data-toc-modified-id="##4.2.-Results: Experimental Outcomes-4.2">4.2. Results: Experimental Outcomes</a></span></li>
-</ul><li><span><a href="#5. Extensions: Application to South Korea" data-toc-modified-id="5.-Extensions: Application to South Korea-5">5. Extensions: Application to South Korea</a></span></li>
-<ul class="toc-item"><li><span><a href="#5.1. The distribution of private institutes" data-toc-modified-id="##5.1.The distribution of private institutes-5.1">5.1. The distribution of private institutes</a></span></li>
-<li><span><a href="#5.2. The average living purpose land price by districts" data-toc-modified-id="##5.2.The average living purpose land price by districts-5.2">5.2. The average living purpose land price by districts</a></span></li>    
+<ul class="toc-item"><li><span><a href="#4.1. Beliefs" data-toc-modified-id="#4.1.Beliefs-4.1">4.1. Beliefs</a></span></li>
+<li><span><a href="#4.2. Results: Experimental Outcomes" data-toc-modified-id="#4.2.Results: Experimental Outcomes-4.2">4.2. Results: Experimental Outcomes</a></span></li>
+</ul><li><span><a href="#5.-Extensions: Application to South Korea" data-toc-modified-id="5.-Extensions: Application to South Korea-5">5. Extensions: Application to South Korea</a></span></li>
+<ul class="toc-item"><li><span><a href="#5.1. The distribution of private institutes" data-toc-modified-id="#5.1.The distribution of private institutes-5.1">5.1. The distribution of private institutes</a></span></li>
+<li><span><a href="#5.2. The average living purpose land price by districts" data-toc-modified-id="#5.2.The average living purpose land price by districts-5.2">5.2. The average living purpose land price by districts</a></span></li>    
 </ul><li><span><a href="#6.-Conclusion" data-toc-modified-id="6.-Conclusion-6">6.Conclusion</a></span></li>
-<li><span><a href="#7.-Reference" data-toc-modified-id="7.-Reference-7">7.Reference</a></span></li></ul>
+<li><span><a href="#7.-Reference" data-toc-modified-id="7.-Reference-7">7.Reference</a></span></li>
 
 
 <br>
