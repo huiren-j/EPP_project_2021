@@ -75,6 +75,7 @@ def table2(df_list, y_list, x_list):
 
     return table
 
+#table 3 is produced by table3_reg fuction in tables_analysis.py. This way is more efficient for table3 unlikely to other tables
 
 def table4_PanelA(df, type_list):
     '''To make a complete table4
