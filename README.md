@@ -13,6 +13,8 @@ This repository is constructed by a template offered by https://github.com/OpenS
     
 **This replication** consists of files to produce 4 tables and 4 figures from original paper and two maps using folium as extensions. In order to see the tables directly, simply run `"table_produce.py"` in "../src/final". It contains functions defined at `"tables_management.py"` and `"tables_analysis.py"`. Each files include codes to prepare for analysis and to run the regressions. For the case of figures, they would be also produced by running `"figures_produce.py"`. Likewise, the detailed functions for generating figures are in `"figures_management.py"` and `"figures_analysis.py"`. All data for the analysis are in "src/original_data". In addition, I appended a short extenstion to show relation between education and parents' financial status with evidence of Seoul, the capital city of South Korea. This part will visualize land price and the number of private institute related to university entrance exams by district level. In order to see this result, use `"extension_produce.py"`. As like did in figures and tables, this final file is supported by `"extension_management.py"`and `"extension_analysis.py"`.
 
+**NOTE**:The function names do not have to be one to one matched to each figures or functions because the overlapped parts are incoported into one function. For example, in the case of figures, input data can be the only factor determining figures to be produced. Thus, if the process of making figure is same, the function is defined once for efficiency. Also, if dividing tables into two parts of analysis and making a table looks inefficient, I just kept it in tables_analysis.py. Table3 is the case of it. This Readme shows only figures output due to its file type but codes covers replication of tables as well.
+
     
 <br>
 
@@ -222,3 +224,4 @@ The interesting findings of this article is, firstly, that the school report car
 - Dizon-Ross, Rebecca. 2019. "Parents' Beliefs about Their Children's Academic Ability: Implications for Educational Investments." American Economic Review, 109 (8): 2728-65.  
 - Raj Chetty, John N Friedman, Emmanuel Saez, Nicholas Turner, Danny Yagan, Income Segregation and Intergenerational Mobility Across Colleges in the United States, The Quarterly Journal of Economics, Volume 135, Issue 3, August 2020, Pages 1567–1633, https://doi.org/10.1093/qje/qjaa005
 - Seoul Datasets, http://data.seoul.go.kr/dataList/195/S/2/datasetView.do
+-  https://github.com/OpenSourceEconomics/econ-project-templates/archive
